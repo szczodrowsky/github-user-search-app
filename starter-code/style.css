@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f6f8ff;
+  padding: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+@media (min-width: 610px) {
+  .container {
+    max-width: 48rem;
+  }
+}
+.heading {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5625rem;
+}
+@media (min-width: 610px) {
+  .heading {
+    gap: 22.9375rem;
+  }
+}
+.tittle {
+  color: #222731;
+  font-family: "Space Mono", monospace;
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.icon-and-switch {
+  display: flex;
+  height: 1.25rem;
+  padding-left: 0.125rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.switch {
+  color: #4b6a9b;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.15625rem;
+}
+
+.icon-seracher-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.9375rem;
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  width: 100%;
+  padding: 1.25rem 1rem;
+}
+
+.inputSearcher {
+  border: transparent;
+  color: #4b6a9b;
+  font-family: "Space Mono", monospace;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  border: none;
+  width: 80%;
+}
+.searchBtn {
+  border-radius: 0.625rem;
+  background: #0079ff;
+  width: 5.25rem;
+  height: 2.875rem;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  border-radius: 0.9375rem;
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  gap: 1.5rem;
+}
+
+.card-heading {
+  display: flex;
+  gap: 1rem;
+}
+.user-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.user-name {
+  color: #2b3442;
+  font-family: "Space Mono";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.short-name {
+  color: #0079ff;
+  font-family: "Space Mono";
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.when-joined {
+  color: #697c9a;
+  font-family: "Space Mono";
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.describe {
+  color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  max-width: 17.4375rem;
+}
+@media (min-width: 610px) {
+  .describe {
+    max-width: 30rem;
+  }
+}
+.repos-folows-following {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.13rem 0.94rem;
+  border-radius: 0.625rem;
+  background: #f6f8ff;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  color: #4b6a9b;
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.number {
+  color: #2b3442;
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.iconns-describe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.06rem;
+}
+
+.flex-line-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.8125rem;
+  align-items: center;
+}
+
+.iconns-describe .bigger {
+  gap: 1.20294rem;
+}
+.name-icon {
+  color: #4b6a9b;
+  font-family: "Space Mono";
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (min-width: 610px) {
+  .iconns-describe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.19rem;
+  }
+}
