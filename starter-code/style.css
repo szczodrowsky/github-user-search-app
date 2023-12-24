@@ -167,6 +167,11 @@ body {
   display: flex;
   gap: 1rem;
 }
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
 .user-data {
   display: flex;
   flex-direction: column;

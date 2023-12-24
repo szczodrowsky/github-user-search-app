@@ -77,3 +77,74 @@ switchElement.addEventListener("click", () => {
     isLight = true;
   }
 });
+///API section ///
+function convertDate(created_at) {
+  const dateObject = new Date(created_at);
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const day = dateObject.getUTCDate();
+  const monthIndex = dateObject.getUTCMonth();
+  const year = dateObject.getUTCFullYear();
+  const formattedDate = `${day} ${monthNames[monthIndex]} ${year}`;
+
+  return formattedDate;
+}
+const searchBtn = document.getElementById("searchBtn");
+const repoNumber = document.getElementById("repoNumber");
+const folowersNumber = document.getElementById("folowersNumber");
+const followsNumber = document.getElementById("followsNumber");
+const locationName = document.getElementById("locationName");
+const websiteName = document.getElementById("websiteName");
+const twitterName = document.getElementById("twitterLink");
+const companyName = document.getElementById("companyName");
+const avatar = document.getElementById("avatar");
+
+function setDocument(data) {
+  function setTextContent(element, text) {
+    if (text) {
+      element.textContent = text;
+    } else {
+      element.textContent = "Not Available";
+      element.style.color = "hsla(217, 35%, 45%, 1)";
+    }
+  }
+
+  setTextContent(userName, data.name);
+  setTextContent(shortName, data.login);
+  setTextContent(describe, data.bio);
+  setTextContent(repoNumber, data.public_repos);
+  setTextContent(folowersNumber, data.followers);
+  setTextContent(followsNumber, data.following);
+  setTextContent(locationName, data.location);
+  setTextContent(websiteName, data.blog);
+  setTextContent(twitterName, data.twitter_username);
+  setTextContent(companyName, data.company);
+  const createdDate = convertDate(data.created_at);
+  setTextContent(whenJoined, createdDate);
+  avatar.src = data.avatar_url || "./assets/Oval.svg";
+}
+
+function getUserData() {
+  const search = document.getElementById("searchForUser").value;
+  const orginalName = search.split(" ").join("");
+  const APIurl = "https://api.github.com/users/" + orginalName;
+
+  fetch(APIurl)
+    .then((response) => response.json())
+    .then((data) => setDocument(data));
+}
+
+searchBtn.addEventListener("click", getUserData);
