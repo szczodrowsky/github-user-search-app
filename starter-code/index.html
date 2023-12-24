@@ -11,19 +11,19 @@
       href="./assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-
+    <script defer src="index.js"></script>
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
-  <body>
+  <body id="myBody">
     <div class="container">
-      <div class="heading">
+      <div class="heading" id="heading">
         <h1 class="tittle" id="tittle">devfinder</h1>
         <div class="icon-and-switch">
           <p class="switch" id="switch">DARK</p>
-          <img src="./assets/icon-moon.svg" alt="moon" />
+          <img id="day-night" src="./assets/icon-moon.svg" alt="moon" />
         </div>
       </div>
-      <div class="icon-seracher-button">
+      <div class="icon-seracher-button" id="icon-seracher-button">
         <img src="./assets/icon-search.svg" alt="search" />
         <input
           class="inputSearcher"
@@ -33,7 +33,7 @@
         />
         <button class="searchBtn" id="searchBtn">Search</button>
       </div>
-      <div class="card">
+      <div class="card" id="card">
         <div class="card-heading">
           <picture class="hero">
             <img src="./assets/Oval.svg" alt="oval" />
@@ -50,7 +50,7 @@
           aspernatur beatae, molestias assumenda quo voluptates quod incidunt
           consequuntur ab deserunt similique.
         </p>
-        <div class="repos-folows-following">
+        <div class="repos-folows-following" id="repos-folows-following">
           <div class="flex-container">
             <p class="name">Repos</p>
             <p class="number" id="repoNumber">8</p>
@@ -75,7 +75,12 @@
             <p class="name-icon" id="locationName">San Francisco</p>
           </div>
           <div class="flex-line-group">
-            <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              height="20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-sweet"
+            >
               <g fill="#4b6a9b">
                 <path
                   d="M7.404 5.012c-2.355 2.437-1.841 6.482.857 8.273.089.06.207.048.283-.027.568-.555 1.049-1.093 1.47-1.776a.213.213 0 00-.084-.3A2.743 2.743 0 018.878 10.1a2.64 2.64 0 01-.223-1.803c.168-.815 1.043-1.573 1.711-2.274l-.004-.002 2.504-2.555a2.568 2.568 0 013.648-.019 2.6 2.6 0 01.037 3.666l-1.517 1.56a.266.266 0 00-.06.273c.35 1.012.435 2.44.201 3.519-.006.03.031.05.053.028l3.228-3.295c2.062-2.105 2.044-5.531-.04-7.615a5.416 5.416 0 00-7.691.04L7.417 4.998l-.013.014z"
@@ -88,7 +93,12 @@
             <p class="name-icon" id="websiteName">https://github.blog</p>
           </div>
           <div class="flex-line-group">
-            <svg height="18" width="20" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              height="18"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-sweet"
+            >
               <path
                 d="M20 2.799a8.549 8.549 0 01-2.363.647 4.077 4.077 0 001.804-2.266 8.194 8.194 0 01-2.6.993A4.099 4.099 0 009.75 4.977c0 .324.027.637.095.934-3.409-.166-6.425-1.8-8.452-4.288a4.128 4.128 0 00-.56 2.072c0 1.42.73 2.679 1.82 3.408A4.05 4.05 0 01.8 6.598v.045a4.119 4.119 0 003.285 4.028 4.092 4.092 0 01-1.075.135c-.263 0-.528-.015-.776-.07.531 1.624 2.038 2.818 3.831 2.857A8.239 8.239 0 01.981 15.34 7.68 7.68 0 010 15.285a11.543 11.543 0 006.29 1.84c7.545 0 11.67-6.25 11.67-11.667 0-.182-.006-.357-.015-.53A8.18 8.18 0 0020 2.798z"
                 fill="#4b6a9b"
@@ -96,7 +106,7 @@
             </svg>
             <p class="name-icon" id="twitterLink">Not Available</p>
           </div>
-          <div class="flex-line-group">
+          <div class="flex-line-group" class="icon-sweet">
             <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
               <g fill="#4b6a9b">
                 <path
